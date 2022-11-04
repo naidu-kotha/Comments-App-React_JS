@@ -47,20 +47,25 @@ class Comments extends Component {
       ]
     }`
 
-    const newReview = {
-      id: uuidv4(),
-      name,
-      reviewText,
-      isLiked: false,
-      date: new Date(),
-      initialClassName: initialBackgroundColorClassName,
-    }
+    if (name === '' || reviewText === '') {
+      alert('Enter Valid Details')
+      event.preventDefault()
+    } else {
+      const newReview = {
+        id: uuidv4(),
+        name,
+        reviewText,
+        isLiked: false,
+        date: new Date(),
+        initialClassName: initialBackgroundColorClassName,
+      }
 
-    this.setState(prevState => ({
-      reviewsList: [...prevState.reviewsList, newReview],
-      name: '',
-      reviewText: '',
-    }))
+      this.setState(prevState => ({
+        reviewsList: [...prevState.reviewsList, newReview],
+        name: '',
+        reviewText: '',
+      }))
+    }
   }
 
   onChangeName = event => {
@@ -74,6 +79,7 @@ class Comments extends Component {
   render() {
     const {reviewsList, name, reviewText} = this.state
     let {count} = this.state
+
     count = reviewsList.length
     return (
       <div className="bg">
