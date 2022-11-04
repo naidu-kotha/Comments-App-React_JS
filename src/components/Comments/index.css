@@ -1,0 +1,138 @@
+/* Write your CSS here */
+
+.bg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  .bg {
+    padding: 80px;
+  }
+}
+
+.heading {
+  font-family: 'Roboto';
+  font-size: 32px;
+  color: #1e293b;
+  align-self: flex-start;
+  margin: 0;
+}
+
+.top-card {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #dee0e3;
+}
+
+@media screen and (min-width: 768px) {
+  .top-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.image {
+  width: 80%;
+  align-self: center;
+  margin: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .image {
+    width: 35%;
+    order: 1;
+    margin-bottom: 10px;
+    margin-right: 50px;
+  }
+}
+
+.comments-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .comments-container {
+    width: 40%;
+  }
+}
+
+.para {
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: #475569;
+  font-weight: 500;
+}
+
+.text {
+  font-family: 'Roboto';
+  font-size: 18px;
+  color: #1e293b;
+  font-weight: 500;
+  margin-bottom: 10px;
+  border: 1px solid #dee0e3;
+  outline: none;
+  height: 40px;
+  padding-left: 10px;
+  border-radius: 5px;
+  width: 95%;
+}
+
+@media screen and (min-width: 768px) {
+  .text {
+    width: 350px;
+  }
+}
+
+.comment-box {
+  min-height: 150px;
+  display: flex;
+}
+
+.button {
+  background-color: #0284c7;
+  width: 130px;
+  color: #ffffff;
+  padding: 8px;
+  padding-left: 6px;
+  padding-right: 6px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: 'Roboto';
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.profile-pic {
+  font-family: 'Roboto';
+  font-size: 16px;
+  margin-right: 10px;
+  color: #ffffff;
+  min-width: 30px;
+  max-height: 30px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.total-comments {
+  font-family: 'Roboto';
+  color: #1e293b;
+}
+
+.comments-count {
+  background-color: #0284c7;
+  padding: 5px;
+  color: #fff;
+  margin-right: 10px;
+  font-size: 14px;
+  border-radius: 3px;
+}
